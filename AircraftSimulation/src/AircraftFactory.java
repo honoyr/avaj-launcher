@@ -1,4 +1,8 @@
 abstract public class AircraftFactory {
+
+    public AircraftFactory() {
+    }
+
     public static Flyable newAircraft(String type, String name, int longitude, int latitude, int height){
 
 
@@ -20,6 +24,6 @@ abstract public class AircraftFactory {
             Baloon newBaloon = new Baloon(name, newCordinates);
             return newBaloon;
         }
-
-
+        return null;
+    }
 }

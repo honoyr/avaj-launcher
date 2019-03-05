@@ -7,6 +7,17 @@ public class AirCraftimulation {
         WeatherProvider weatherProvider = new WeatherProvider();
 
         WeatherTower weatherTower = new WeatherTower();
-        weatherProvider.getCurrentWeather()
+
+//        weatherTower.getWeather(654, 33, 20);
+
+        AircraftFactory aircraftFactory = new AircraftFactory();
+
+//        Flyable flyable = new Flyable();
+
+//        aircraftFactory.newAircraft("Helicopter", "H1", 654, 33, 20);
+
+//        Aircraft Helicopter =
+
+        weatherTower.register(aircraftFactory.newAircraft("Helicopter", "H1", 654, 33, 20));
     }
 }
