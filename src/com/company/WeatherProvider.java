@@ -1,5 +1,4 @@
-package weather;
-//package src;
+package com.company;
 
 import java.util.Random;
 
@@ -17,12 +16,12 @@ public class WeatherProvider {
     public String getCurrentWeather(Coordinates coordinates) {
 
         Random rand = new Random();
-        int index = (coordinates.getLatitude() + coordinates.getLongitude() + coordinates.getHeight()) % 4;
-        System.out.println(index);
-        index = rand.nextInt(4);
+//        int index = (coordinates.getLatitude() + coordinates.getLongitude() + coordinates.getHeight()) % 4;
+//        System.out.println("MY RANDOM GEN = " + index);
+        int index = rand.nextInt(4);
+//        System.out.println("RANDOM GEN  = " + index);
+//        System.out.println(this.weather[index]);
 
-        System.out.println(this.weather[rand]);
-
-        return this.weather[rand];
+        return this.weather[index];
     }
 }

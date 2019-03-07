@@ -1,3 +1,5 @@
+package com.company;
+
 public class Coordinates {
     private int longitude;
     private int latitude;
@@ -22,5 +24,23 @@ public class Coordinates {
 
     public int getHeight() {
         return height;
+    }
+
+    // SETERS
+    public void setLongitude(int longitude) {
+        this.longitude = longitude;
+    }
+
+    public void setLatitude(int latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setHeight(int height) {
+        if (height >= 0 && height <= 100)
+            this.height = height;
+        else if (height > 100)
+            this.height = 100;
+        else
+            this.height = 0;
     }
 }

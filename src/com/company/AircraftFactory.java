@@ -1,3 +1,5 @@
+package com.company;
+
 abstract public class AircraftFactory {
 
     public AircraftFactory() {
