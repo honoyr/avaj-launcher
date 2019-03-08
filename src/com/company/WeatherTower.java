@@ -5,10 +5,7 @@ public class WeatherTower extends Tower {
 
     private int cycle;
 
-    public WeatherTower() {
-    }
-
-    public void WeatherTower(int cycle) {
+    public WeatherTower(int cycle) {
 
         this.cycle = cycle;
     }

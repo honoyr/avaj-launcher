@@ -12,44 +12,53 @@ public class Helicopter extends Aircraft implements Flyable {
 
         String weather = weatherTower.getWeather(coordinates);
 
+        System.out.print(getInfo());
         switch(weather){
-            case "SUM":
+            case "SUN":
             {
                 coordinates.setLatitude(coordinates.getLatitude() + 10);
                 coordinates.setHeight(coordinates.getHeight() + 2);
-                System.out.println(this.getClass().getName() + "#" + getName()
-                        + "(" + getId() + "):"
-                        + "This is hot.");
+                System.out.println("This is hot.");
+                break;
             }
             case "RAIN": {
                 coordinates.setLongitude(coordinates.getLongitude() + 5);
-                System.out.println(this.getClass().getName() + "#" + getName()
-                        + "(" + getId() + "):"
-                        + "This is wet.");
+                System.out.println("This is wet.");
+                break;
             }
 
             case "FOG": {
                 coordinates.setLongitude(coordinates.getLongitude() + 1);
-                System.out.println(this.getClass().getName() + "#" + getName()
-                        + "(" + getId() + "):"
-                        + "I don't see anything.");
+                System.out.println("I don't see anything.");
+                break;
             }
             case "SNOW": {
                 coordinates.setHeight(coordinates.getHeight() - 12);
-                System.out.println(this.getClass().getName() + "#" + getName()
-                        + "(" + getId() + "):"
-                        + "My rotor is going to freeze!");
+                System.out.println("My rotor is going to freeze!");
+                break;
             }
         }
-    }
-
-    public String getInfo(){
-        String messege = this.getClass().getName() + "#" + getName() + getId();
-        return (messege);
+        if (coordinates.getHeight() == 0)
+        {
+            System.out.print(getInfo());
+            land();
+            weatherTower.unregister(this);
+        }
     }
 
     @Override
     public void registerTower(WeatherTower weatherTower) {
-        weatherTower.register(this);
+        this.weatherTower = weatherTower;
+    }
+
+    public void land(){
+        System.out.println("Landing. Coordinates: Height = " + coordinates.getHeight()
+                + " longitude = " + coordinates.getLongitude()
+                + " Latitude = " + coordinates.getLatitude());
+    }
+
+    public String getInfo(){
+        String messege = this.getClass().getSimpleName() + "#" + getName() + "(" + getId() + "): ";
+        return (messege);
     }
 }

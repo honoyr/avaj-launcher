@@ -24,9 +24,14 @@ abstract public class Tower {
     }
     protected void conditionsChanged(){
         if (observers.size() > 0) {
-            for (Flyable check : observers) {
-                System.out.print(check.getInfo());
-                check.updateConditions();
+//            for (Flyable check : observers) {
+//                System.out.print(check.getInfo());
+//                check.updateConditions();
+//            }
+            for (int i = 0; i < observers.size(); i++)
+            {
+//                System.out.print(observers.get(i).getInfo());
+                observers.get(i).updateConditions();
             }
         }
     }

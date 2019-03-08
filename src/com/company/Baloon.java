@@ -13,11 +13,13 @@ public class Baloon extends Aircraft implements Flyable {
 
         String weather = weatherTower.getWeather(coordinates);
 
+        System.out.print(getInfo());
         switch(weather){
-            case "SUM":
+            case "SUN":
             {
                 coordinates.setLongitude(coordinates.getLatitude() + 2);
                 coordinates.setHeight(coordinates.getHeight() + 4);
+
                 System.out.println("Good weather for fly. Let's enjoy the good weather and take some pics.");
                 break ;
             }
@@ -33,7 +35,6 @@ public class Baloon extends Aircraft implements Flyable {
             }
             case "SNOW": {
                 coordinates.setHeight(coordinates.getHeight() - 15);
-                System.out.print(getInfo());
                 System.out.println("It's snowing. We're  gonna crash.");
                 break ;
             }
@@ -49,7 +50,6 @@ public class Baloon extends Aircraft implements Flyable {
     @Override
     public void registerTower(WeatherTower weatherTower) {
         this.weatherTower = weatherTower;
-//        weatherTower.register(this);
     }
 
     public void land(){
