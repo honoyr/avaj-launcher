@@ -1,4 +1,4 @@
-package com.company;
+package avaj.simulator;
 
 interface Product { }
 

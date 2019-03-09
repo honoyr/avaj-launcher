@@ -1,4 +1,4 @@
-package com.company;
+package avaj.simulator;
 
 import java.io.FileWriter;
 import java.io.IOException;

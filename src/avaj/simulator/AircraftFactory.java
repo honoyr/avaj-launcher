@@ -1,4 +1,4 @@
-package com.company;
+package avaj.simulator;
 
 abstract public class AircraftFactory {
 

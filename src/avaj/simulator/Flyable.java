@@ -1,4 +1,4 @@
-package com.company;
+package avaj.simulator;
 
 public interface Flyable {
     public void updateConditions(LogFile file);

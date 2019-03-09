@@ -1,5 +1,5 @@
 //import WeatherProvider;
-package com.company;
+package avaj.simulator;
 
 public class WeatherTower extends Tower {
 

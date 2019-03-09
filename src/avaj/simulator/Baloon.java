@@ -1,4 +1,4 @@
-package com.company;
+package avaj.simulator;
 
 public class Baloon extends Aircraft implements Flyable {
 
