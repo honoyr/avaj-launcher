@@ -17,11 +17,9 @@ public class Coordinates {
     public int getLongitude() {
         return longitude;
     }
-
     public int getLatitude() {
         return latitude;
     }
-
     public int getHeight() {
         return height;
     }
@@ -30,11 +28,9 @@ public class Coordinates {
     public void setLongitude(int longitude) {
         this.longitude = longitude;
     }
-
     public void setLatitude(int latitude) {
         this.latitude = latitude;
     }
-
     public void setHeight(int height) {
         if (height >= 0 && height <= 100)
             this.height = height;

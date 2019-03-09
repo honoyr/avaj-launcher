@@ -12,33 +12,28 @@ public class Helicopter extends Aircraft implements Flyable {
 
         String weather = weatherTower.getWeather(coordinates);
 
-        System.out.print(getInfo());
         file.AddToFile(getInfo());
         switch(weather){
             case "SUN":
             {
                 coordinates.setLatitude(coordinates.getLatitude() + 10);
                 coordinates.setHeight(coordinates.getHeight() + 2);
-                System.out.println("This is hot.");
                 file.AddToFile("This is hot.\n");
                 break;
             }
             case "RAIN": {
                 coordinates.setLongitude(coordinates.getLongitude() + 5);
-                System.out.println("This is wet.");
                 file.AddToFile("It's wet.\n");
                 break;
             }
 
             case "FOG": {
                 coordinates.setLongitude(coordinates.getLongitude() + 1);
-                System.out.println("I don't see anything.");
                 file.AddToFile("I don't see anything.\n");
                 break;
             }
             case "SNOW": {
                 coordinates.setHeight(coordinates.getHeight() - 12);
-                System.out.println("My rotor is going to freeze!");
                 file.AddToFile("My rotor is going to freeze!\n");
                 break;
             }

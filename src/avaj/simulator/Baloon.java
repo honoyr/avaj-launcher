@@ -16,33 +16,27 @@ public class Baloon extends Aircraft implements Flyable {
 
         String weather = weatherTower.getWeather(coordinates);
 
-        System.out.print(getInfo());
         file.AddToFile(getInfo());
         switch(weather){
             case "SUN":
             {
                 coordinates.setLongitude(coordinates.getLatitude() + 2);
                 coordinates.setHeight(coordinates.getHeight() + 4);
-
-                System.out.println("Good weather for fly. Let's enjoy the good weather and take some pics.");
                 file.AddToFile("Good weather for fly. Let's enjoy the good weather and take some pics.\n");
                 break ;
             }
             case "RAIN": {
                 coordinates.setHeight(coordinates.getHeight() - 5);
-                System.out.println("Damn you rain! You messed up my baloon.");
                 file.AddToFile("Damn you rain! You messed up my baloon.\n");
                 break ;
             }
             case "FOG": {
                 coordinates.setHeight(coordinates.getHeight() - 3);
-                System.out.println("OMG! I'm like a big cherry in the sky. I don't see any");
                 file.AddToFile("OMG! I'm like a big cherry in the sky. I don't see anything\n");
                 break ;
             }
             case "SNOW": {
                 coordinates.setHeight(coordinates.getHeight() - 15);
-                System.out.println("It's snowing. We're  gonna crash.");
                 file.AddToFile("It's snowing. We're  gonna crash.\n");
                 break ;
             }
