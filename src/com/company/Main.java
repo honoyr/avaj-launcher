@@ -1,9 +1,6 @@
 package com.company;
 
-import java.io.FileReader;
-import java.io.FileNotFoundException;
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.*;
 import java.lang.ArrayIndexOutOfBoundsException;
 import java.lang.Exception;
 import java.lang.String;
@@ -75,6 +72,8 @@ public class Main {
         return flag;
     }
 
+//    public static LogFile file = new LogFile();
+
     public static void main (String[] args) {
 
             try {
@@ -98,6 +97,7 @@ public class Main {
                         }
                         reader.close();
                         weatherTower.changeWeather();
+                        weatherTower.closeFile();
                     }
                 }
                 else

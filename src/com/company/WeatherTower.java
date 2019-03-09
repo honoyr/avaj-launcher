@@ -34,4 +34,5 @@ public class WeatherTower extends Tower {
     public void unregister(Flyable flyable) {
         super.unregister(flyable);
     }
+
 }
