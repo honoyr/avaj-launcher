@@ -255,24 +255,6 @@ Simulation: 25
 Helicopter#H3(6): I see no ground!
 JetPlane#J2(8): This sun is getting to my eyes!
 ```
-
-## Additional tests for good and bad scenarios
-To run additional avaj tests run in your terminal in the root of project folder:
-- For good tests
-```
-sh test_good.sh
-```
-- For bad tests
-```
-sh test_bad.sh
-```
-
-`Good Tests Terminal Output`
-![foo](https://github.com/mbortnichuk/avaj-launcher/blob/master/src/pictures/goodTests.png "MainFrame")
-
-`Bad Tests Terminal Output`
-![foo](https://github.com/mbortnichuk/avaj-launcher/blob/master/src/pictures/badTests.png "MainFrame")
-
 ## Author
 - dgonor - [dgonor](https://github.com/honoyr "dgonor")
 
