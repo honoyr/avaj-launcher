@@ -6,7 +6,7 @@ Aim of this project is to implement an aircraft simulation program based on the 
 If necessary, add more classes or include additional attributes, but changing access modifiers and class hireharchy for the classes provided in the diagram are forbidden.
 
 ## UML Diagram
-![foo](https://github.com/mbortnichuk/avaj-launcher/blob/master/src/pictures/avaj_uml.jpg "diagram")
+![](https://user-images.githubusercontent.com/33399226/62906384-432c6a00-bd23-11e9-8f5f-9be8889fe237.jpg)
 
 ## Compile and run
 ```
