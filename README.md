@@ -256,5 +256,5 @@ Helicopter#H3(6): I see no ground!
 JetPlane#J2(8): This sun is getting to my eyes!
 ```
 ## Author
-- [dgonor](https://github.com/honoyr "dgonor")
+- [Denis G.](http://104.197.55.106/ "Denis")
 
